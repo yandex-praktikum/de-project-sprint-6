@@ -4,25 +4,22 @@
 Репозиторий предназначен для сдачи проекта №5.
 
 ### Как работать с репозиторием
-1. В вашем GitHub-аккаунте автоматически создастся репозиторий 
-`de-project-{{ номер проекта }}` после того, как вы привяжете свой 
-GitHub-аккаунт на Платформе.
-2. Скопируйте репозиторий на свой локальный компьютер:
-    * `git clone https://github.com/{{ username }}/de-project-5.git`
-    * `cd de-project-5`
-3. Выполните проект и сохраните получившийся код в локальном репозитории:
-	  * `git add .`
-	  * `git commit -m 'my best commit'`
-4. Обновите репозиторий в вашем GutHub-аккаунте:
-	  * `git push origin main`
+1. В вашем GitHub-аккаунте автоматически создастся репозиторий `de-project-5` после того, как вы привяжете свой GitHub-аккаунт на Платформе.
+2. Скопируйте репозиторий на свой локальный компьютер, в качестве пароля укажите ваш `Access Token` (получить нужно на странице [Personal Access Tokens](https://github.com/settings/tokens)):
+	* `git clone https://github.com/{{ username }}/de-project-5.git`
+3. Перейдите в директорию с проектом: 
+	* `cd de-project-5`
+4. Выполните проект и сохраните получившийся код в локальном репозитории:
+	* `git add .`
+	* `git commit -m 'my best commit'`
+5. Обновите репозиторий в вашем GutHub-аккаунте:
+	* `git push origin main`
 
 ### Структура репозитория
-- /src/dags
-- README.md
+- `/src/dags`
 
 ### Как запустить контейнер
 Запустите локально команду:
-
 ```
 docker run \
 -d \
@@ -37,5 +34,7 @@ sindb/de-pg-cr-af:latest
 ```
 
 После того как запустится контейнер, вам будут доступны:
-- Airflow - localhost:3000/airflow
-- БД - jovyan:jovyan@localhost:15432/de
+- Airflow
+	- `localhost:3000/airflow`
+- БД
+	- `jovyan:jovyan@localhost:15432/de`
